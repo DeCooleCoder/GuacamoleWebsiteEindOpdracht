@@ -18,7 +18,20 @@ namespace WebsiteEindOpdracht.Controllers
             return View();
         }
 
+        [Route("Privacy")]
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Route("Test")]
+        public IActionResult Test()
+        {
+            return View();
+        }
+
+        [Route("Test2")]
+        public IActionResult Test2()
         {
             return View();
         }
