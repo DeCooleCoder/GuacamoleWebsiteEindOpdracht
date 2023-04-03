@@ -3,6 +3,7 @@ using System.Diagnostics;
 using WebsiteEindOpdracht.Models;
 using MySql.Data;
 using WebsiteEindOpdracht.Database;
+using WebsiteEindOpdracht.DataBase;
 
 namespace WebsiteEindOpdracht.Controllers
 {
@@ -19,6 +20,7 @@ namespace WebsiteEindOpdracht.Controllers
         {
             // alle producten ophalen
             var rows = DatabaseConnector.GetRows("select * from acteurs");
+            var films = GetAllfilms();
 
             // lijst maken om alle namen in te stoppen
             List<string> names = new List<string>();
@@ -30,7 +32,7 @@ namespace WebsiteEindOpdracht.Controllers
             }
 
             // de lijst met namen in de html stoppen
-            return View(names);
+            return View(films);
         }
 
         [Route("Privacy")]
@@ -61,6 +63,30 @@ namespace WebsiteEindOpdracht.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public List<films> GetAllfilms()
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from films");
+
+            // lijst maken om alle producten in te stoppen
+            List<films> products = new List<films>();
+
+            foreach (var row in rows)
+            {
+                // Voor elke rij maken we nu een product
+                films p = new films();
+                p.Naam = row["naam"].ToString();
+                p.ReleaseDate = row["ReleaseDate"].ToString();
+                p.Tijdsduur = row["Tijdsduur"].ToString();
+                p.Genre = row["Genre"].ToString();
+
+                // en dat product voegen we toe aan de lijst met producten
+                products.Add(p);
+            }
+
+            return products;
         }
     }
 }
