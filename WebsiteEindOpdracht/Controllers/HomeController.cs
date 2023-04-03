@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebsiteEindOpdracht.Models;
+using MySql.Data;
+using WebsiteEindOpdracht.Database;
 
 namespace WebsiteEindOpdracht.Controllers
 {
@@ -15,7 +17,20 @@ namespace WebsiteEindOpdracht.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            // alle producten ophalen
+            var rows = DatabaseConnector.GetRows("select * from acteurs");
+
+            // lijst maken om alle namen in te stoppen
+            List<string> names = new List<string>();
+
+            foreach (var row in rows)
+            {
+                // elke naam toevoegen aan de lijst met namen
+                names.Add(row["Acteur"].ToString());
+            }
+
+            // de lijst met namen in de html stoppen
+            return View(names);
         }
 
         [Route("Privacy")]
