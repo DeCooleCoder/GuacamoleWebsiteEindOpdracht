@@ -10,6 +10,7 @@ namespace WebsiteEindOpdracht.Database
       // stel in waar de database gevonden kan worden
       // string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=fastfood;Uid=lgg;Pwd=<jouwwachtwoordhier>;";
       string connectionString = "Server=172.16.160.21;Port=3306;Database=111137;Uid=111137;Pwd=Inf2022sql;";
+      //string connectionString = "Server=127.0.0.1; Port=3306;Database=111137;Uid=111137;Pwd=Password1234";
 
       // maak een lege lijst waar we de namen in gaan opslaan
       List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
