@@ -18,20 +18,20 @@ namespace WebsiteEindOpdracht.Controllers
             return View();
         }
 
-        [Route("Privacy")]
-        public IActionResult Privacy()
+        [Route("Films")]
+        public IActionResult Films()
         {
             return View();
         }
 
-        [Route("Test")]
-        public IActionResult Test()
+        [Route("kidsfilms")]
+        public IActionResult kidsfilms()
         {
             return View();
         }
 
-        [Route("Test2")]
-        public IActionResult Test2()
+        [Route("Bioscopen")]
+        public IActionResult Bioscopen()
         {
             return View();
         }
