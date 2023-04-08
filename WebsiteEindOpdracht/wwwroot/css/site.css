@@ -58,3 +58,21 @@ input[type=submit] {
 }
 
 
+/*Dit is voor de Navbar bovenaan*/
+ul {
+    list-style-type: none;
+}
+
+.navbar {
+    background-color: darkred;
+    color: white;
+}
+
+.navbar-items {
+
+}
+
+.nav-link{
+    color: white
+}
+
