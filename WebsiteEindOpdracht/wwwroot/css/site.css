@@ -58,7 +58,7 @@ input[type=submit] {
 }
 
 
-/*Dit is voor de Navbar bovenaan*/
+/*Dit is voor de Navbar bovenaan (note dit is niet hoe wiju het ingedeeld hebben maar hoe visual studio het heeft ingedeeld en hiermee dus moeten werken*/
 ul {
     list-style-type: none;
 }
@@ -66,13 +66,19 @@ ul {
 .navbar {
     background-color: darkred;
     color: white;
+    justify-content: flex-start;
 }
 
 .navbar-items {
-
+    display: flex;
 }
 
 .nav-link{
-    color: white
+    color: white;
+}
+
+.navbar-brand{
+    color: white;
+    padding: 10px;
 }
 
