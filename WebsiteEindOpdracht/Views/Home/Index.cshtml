@@ -6,13 +6,50 @@
 <head>
     <link rel="stylesheet" href="~/css/Index.css">
 </head>
+
 <body>
     <div class="text-center">
-        <h1 class="display-4">Hello World!</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <h1 class="HomeTitel">Films die nu draaien!</h1>
     </div>
-    <h1>This is a heading</h1>
-    <p>This is a paragraph.</p>
 
+    <!--Hierna komt het gedeelte voor de film carousel/slider-->
+
+    <div class:"slide hi-slide">
+        <div class="hi-prev"></div>
+        <div class ="hi-next"></div>
+        <ul>
+            <li>
+            <img src="/css/img/SintFilm.png" alt="Sint Film">    
+            </li>
+            <li>
+            <img src="/css/img/winniethepoohorrorFilm.png" alt="Winnie the ppoh horror film">
+            </li>
+            <li>
+            <img src="/css/img/PlaneFilm.png" alt="Plane film">
+            </li>
+            <li>
+            <img src="/css/img/Frozen2.png" alt="Frozen II film">
+            </li>
+            <li>
+            <img src="/css/img/Despicableme2.png" alt="Despicable me 2 film">
+            </li>
+            <li>
+            <img src="/css/img/pussinbootsFilm.png" alt="Puss in Boots film">
+            </li>
+            <li>
+            <img src="/css/img/Sing2Film.png" alt="Sing 2 film">
+            </li>
+            <li>
+            <img src="/css/img/Antmanfilm.png" alt="Antman film">
+            </li>
+        </ul>
+    </div>
+    <script src = "https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="js/jquery.hislide.js"></script>
+    <script>
+
+        $('.slide').hiSlide();
+
+    </script>
 </body>
 </html>
