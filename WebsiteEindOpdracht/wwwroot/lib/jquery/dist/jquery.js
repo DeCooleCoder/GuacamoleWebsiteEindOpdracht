@@ -8,9 +8,10 @@
  * Copyright JS Foundation and other contributors
  * Released under the MIT license
  * https://jquery.org/license
- *
+ * 
  * Date: 2020-05-04T22:49Z
  */
+
 ( function( global, factory ) {
 
 	"use strict";
