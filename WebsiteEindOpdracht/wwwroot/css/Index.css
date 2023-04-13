@@ -4,16 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-body {
-    background-image: url(ur.jpg);
-}
-
-h1 {
-    margin: 150px auto 30px auto;
-    text-align: center;
-    color: #fff;
-}
-
 .hi-slide {
     position: relative;
     width: 754px;
@@ -91,3 +81,22 @@ h1 {
                 height: 100%;
                 background-position: center;
             }
+
+.mainsection {
+    width: 1000px;
+    height: 1000px;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+}
+
+.mainpagetitel {
+    background: rgba(252, 64, 64, 0.5);
+    border-radius: 30px;;
+    color: #fff;
+    margin: 150px auto 30px auto;
+    text-align: center;
+}
+
+h1{
+    font-size: 5em;
+}
