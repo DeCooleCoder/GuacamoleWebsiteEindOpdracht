@@ -1,25 +1,33 @@
-﻿@{
+﻿@model WebsiteEindOpdracht.Models.Person
+@{
     ViewData["Title"] = "Contact";
 }
+<h1>@ViewData["Titel"]</h1>
 
-<body>
+<form method="post" class="contactform">
+  <div class="form-group">
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    @Html.ValidationMessageFor(m => m.FirstName)
+  </div>
 
-<h3>Contact Form</h3>
+<div class="form-group">
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName)
+    @Html.ValidationMessageFor(m => m.LastName)
+  </div>
 
-<div class="container">
-  <form action="/action_page.php">
-    <label for="fname">Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  <div class="form-group">
+    @Html.LabelFor(m => m.EmailAdress)
+    @Html.TextBoxFor(m => m.EmailAdress)
+    @Html.ValidationMessageFor(m => m.EmailAdress)
+  </div>
 
-    <label for="lname">E-Mail</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  <div class="form-group">
+    @Html.LabelFor(m => m.Description)
+    @Html.TextBoxFor(m => m.Description)
+    @Html.ValidationMessageFor(m => m.Description)
+  </div>
 
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
-
-</body>
+  <input type="submit" value="verstuur" />
+</form>

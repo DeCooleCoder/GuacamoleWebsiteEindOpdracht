@@ -35,20 +35,20 @@ namespace WebsiteEindOpdracht.Controllers
             return View(films);
         }
 
-        [Route("Privacy")]
-        public IActionResult Privacy()
+        [Route("Films")]
+        public IActionResult Films()
         {
             return View();
         }
 
-        [Route("Test")]
-        public IActionResult Test()
+        [Route("kidsfilms")]
+        public IActionResult Kidsfilms()
         {
             return View();
         }
 
-        [Route("Test2")]
-        public IActionResult Test2()
+        [Route("Bioscopen")]
+        public IActionResult Bioscopen()
         {
             return View();
         }
@@ -58,6 +58,22 @@ namespace WebsiteEindOpdracht.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Contact(Person person)
+        {
+            if (ModelState.IsValid)
+                return Redirect("/succes");
+
+            return View(person);
+        }
+
+        [Route("succes")]
+        public IActionResult Succes()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

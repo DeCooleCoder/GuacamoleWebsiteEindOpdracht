@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using WebsiteEindOpdracht.Models;
+using System.Collections.Generic;
 
 namespace WebsiteEindOpdracht.Database
 {
@@ -50,5 +52,21 @@ namespace WebsiteEindOpdracht.Database
       return rows;
     }
 
-  }
+     public static void SavePerson(Person person)
+     {
+         using (MySqlConnection conn = new MySqlConnection(connectionString))
+         {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO contact(Naam, Achternaam, Email, Bericht) VALUES(?Naam, ?Achternaam, ?Email, ?Bericht)", conn);
+
+                // Elke parameter moet je handmatig toevoegen aan de query
+                cmd.Parameters.Add("?Naam", MySqlDbType.Text).Value = person.FirstName;
+                cmd.Parameters.Add("?Achternaam", MySqlDbType.Text).Value = person.LastName;
+                cmd.Parameters.Add("?Email", MySqlDbType.Text).Value = person.EmailAdress;
+                cmd.Parameters.Add("?Bericht", MySqlDbType.Text).Value = person.Description;
+                cmd.ExecuteNonQuery();
+         }
+     }
+
+    }
 }
