@@ -3,10 +3,11 @@
     overflow-x: hidden;
 }
 
+/*Van af hier begint de code voor de film slider op de home pagina waarin alles in classses is in gedeeld*/
 .hi-slide {
     position: relative;
     width: 754px;
-    /*height: 292px;*/
+    /*height: 292px; (test)*/
     margin: 115px auto 0;
 }
 
@@ -80,6 +81,8 @@
                 height: 100%;
                 background-position: center;
             }
+/*Dit is waar de code voor de slider eindigt*/
+
 
 .mainsection {
     width: 1000px;

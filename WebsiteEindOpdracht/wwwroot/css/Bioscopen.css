@@ -1,6 +1,28 @@
-﻿body {
+﻿.mainsectionlocaties {
+    width: 1000px;
+    height: 750px;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    border-radius: 30px;
 }
 
-p{
-    color: aqua;
+.mainpagetitel {
+    background: rgba(252, 64, 64, 0.5);
+    border-radius: 30px;
+    color: #fff;
+    margin: 50px auto 30px auto;
+    text-align: center;
+}
+
+img {
+    display: flex;
+    float: left;
+    width: 168px;
+    height: 280px;
+    object-fit: contain;
+    margin: 25px;
+}
+
+h1 {
+    font-size: 5em;
 }
