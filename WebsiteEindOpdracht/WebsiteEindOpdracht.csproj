@@ -8,4 +8,8 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\css\img\PietPiraatFilm.jpg" />
+  </ItemGroup>
+
 </Project>
